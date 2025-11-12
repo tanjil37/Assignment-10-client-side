@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import AllBooks from "../pages/AllBooks";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import AddBook from "../pages/AddBook";
 
 export const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
             {
                 path: '/allbooks',
                 Component: AllBooks,
+            },
+             {
+                path: '/addbook',
+                Component: AddBook,
             },
             {
                 path: '/login',
