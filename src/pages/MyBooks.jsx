@@ -40,7 +40,6 @@ const MyBooks = () => {
       console.error("Delete failed:", error);
     }
   };
-
   if (loading) {
     return <LoadingSpinner/>
   }
