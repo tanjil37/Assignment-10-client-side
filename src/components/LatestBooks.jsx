@@ -9,7 +9,7 @@ const LatestBooks = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/books")
+      .get("https://assignment-10-server-one-smoky.vercel.app/books")
       .then((res) => {
         const allBooks = Array.isArray(res.data.result)
           ? res.data.result

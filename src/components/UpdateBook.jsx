@@ -9,7 +9,7 @@ const UpdateBook = () => {
   const [book, setBook] = useState({ title: "", author: "", genre: "", rating: "" });
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/books/${id}`).then((res) => setBook(res.data.result));
+    axios.get(`https://assignment-10-server-one-smoky.vercel.app/books/${id}`).then((res) => setBook(res.data.result));
   }, [id]);
 
   const handleChange = (e) => {
@@ -18,7 +18,7 @@ const UpdateBook = () => {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:3000/books/${id}`, book);
+    await axios.put(`https://assignment-10-server-one-smoky.vercel.app/books/${id}`, book);
     navigate("/my-books");
   };
 

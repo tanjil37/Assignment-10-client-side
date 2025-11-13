@@ -11,7 +11,7 @@ const AllBooks = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/books") // Replace with your backend URL
+      .get("https://assignment-10-server-one-smoky.vercel.app/books") // Replace with your backend URL
       .then((res) => {
         setBooks(res.data);
         setLoading(false);

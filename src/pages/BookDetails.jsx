@@ -18,7 +18,7 @@ const BookDetails = () => {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/books/${id}`);
+        const res = await axios.get(`https://assignment-10-server-one-smoky.vercel.app/books/${id}`);
         setBook(res.data.result);
         setForm(res.data.result);
       } catch (err) {
@@ -41,7 +41,7 @@ const BookDetails = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/books/${id}`, form);
+      await axios.put(`https://assignment-10-server-one-smoky.vercel.app/books/${id}`, form);
       toast.success("Book updated successfully!");
       setBook(form);
       setEditing(false);
@@ -64,7 +64,7 @@ const BookDetails = () => {
   }).then(async (result) => {
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:3000/books/${id}`);
+        await axios.delete(`https://assignment-10-server-one-smoky.vercel.app/books/${id}`);
         Swal.fire({
           title: "Deleted!",
           text: "Book has been deleted successfully.",

@@ -53,7 +53,7 @@ const AddBook = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/books", // replace with your backend endpoint
+        "https://assignment-10-server-one-smoky.vercel.app/books", // replace with your backend endpoint
         newBook
       );
       if (res.data.insertedId) {

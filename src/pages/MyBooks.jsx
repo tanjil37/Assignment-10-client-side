@@ -18,7 +18,7 @@ const MyBooks = () => {
     if (!user?.email) return;
 
     axios
-      .get(`http://localhost:3000/my-books?email=${user.email}`)
+      .get(`https://assignment-10-server-one-smoky.vercel.app/my-books?email=${user.email}`)
       .then((res) => {
         setMyBooks(res.data);
         setLoading(false);
@@ -34,7 +34,7 @@ const MyBooks = () => {
     if (!window.confirm("Are you sure you want to delete this book?")) return;
 
     try {
-      await axios.delete(`http://localhost:3000/books/${id}`);
+      await axios.delete(`https://assignment-10-server-one-smoky.vercel.app/books/${id}`);
       setMyBooks(myBooks.filter((b) => b._id !== id));
     } catch (error) {
       console.error("Delete failed:", error);

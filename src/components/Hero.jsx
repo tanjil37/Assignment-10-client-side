@@ -14,6 +14,7 @@ const Hero = () => {
       title: "Discover Your Next Great Read 📖",
       subtitle: "Explore thousands of books that spark your imagination.",
       image: "https://i.ibb.co/Ctw1bgn/book-banner-1.jpg",
+      
     },
     {
       id: 2,
