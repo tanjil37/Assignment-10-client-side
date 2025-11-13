@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
+import { Link } from "react-router";
 
 const Hero = () => {
   const slides = [
@@ -59,21 +60,25 @@ const Hero = () => {
                 <p className="text-lg md:text-2xl mb-8">{slide.subtitle}</p>
 
                 <div className="flex justify-center gap-4">
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-full text-white font-semibold shadow-lg"
-                  >
-                    All Books
-                  </motion.button>
+                  <Link to="/all-books">
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-full text-white font-semibold shadow-lg"
+                    >
+                      All Books
+                    </motion.button>
+                  </Link>
 
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full text-white font-semibold shadow-lg"
-                  >
-                    Create Book
-                  </motion.button>
+                  <Link to="/add-book">
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full text-white font-semibold shadow-lg"
+                    >
+                      Create Book
+                    </motion.button>
+                  </Link>
                 </div>
               </motion.div>
             </div>
