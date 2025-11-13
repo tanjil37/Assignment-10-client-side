@@ -1,49 +1,3 @@
-// import React, { useEffect, useState } from "react";
-// import LoadingSpinner from "../components/LoadingSpinner";
-
-// const AllBooks = () => {
-//   const [books, setBooks] = useState([]);
-//   const [loading, setLoading] = useState(true);
-//   const [sort, setSort] = useState("");
-//   useEffect(() => {
-//     const fetchBooks = async () => {
-//       setLoading(true);
-//       try {
-//         const q = sort ? `?sortBy=${sort}` : "";
-//         const res = await axios.get(`/books${q}`);
-//         setBooks(res.data);
-//       } catch (e) {
-//         console.error(e);
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-//     fetchBooks();
-//   }, [sort]);
-//   return (
-//     <div>
-//       <div className="flex items-center justify-between mb-4">
-//         <h2 className="text-2xl font-semibold">All Books</h2>
-//         <div>
-//           <label className="mr-2">Sort by Rating:</label>
-//           <select
-//             value={sort}
-//             onChange={(e) => setSort(e.target.value)}
-//             className="border px-2 py-1 rounded"
-//           >
-//             <option value="">None</option>
-//             <option value="rating_desc">High → Low</option>
-//             <option value="rating_asc">Low → High</option>
-//           </select>
-//         </div>
-//       </div>
-
-//       {loading ? <LoadingSpinner /> : <BookTable books={books} />}
-//     </div>
-//   );
-// };
-
-// export default AllBooks;
 
 
 import React, { useEffect, useState } from "react";
@@ -109,7 +63,7 @@ const AllBooks = () => {
                 <td className="px-6 py-4">{book.genre}</td>
                 <td className="px-6 py-4">{book.rating}/5</td>
                 <td className="px-6 py-4 text-center">
-                  <Link to={`/books/${book._id}`}>
+                  <Link to={`/book-details/${book._id}`}>
                     <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full shadow-md">
                       View Details
                     </button>

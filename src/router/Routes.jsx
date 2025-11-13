@@ -8,6 +8,7 @@ import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import LoadingSpinner from "../components/LoadingSpinner";
 import BookDetails from "../pages/BookDetails";
+import MyBooks from "../pages/MyBooks";
 
 export const router = createBrowserRouter([
   {
@@ -20,11 +21,11 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/allbooks",
+        path: "/all-books",
         element: <AllBooks />,
       },
       {
-        path: '/books/:id',
+        path: '/book-details/:id',
         element: (
 
             <PrivateRoute>
@@ -33,12 +34,20 @@ export const router = createBrowserRouter([
         )
       },
       {
-        path: "/addbook",
+        path: "/add-book",
         element: (
           <PrivateRoute>
             <AddBook />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/my-books",
+        element:(
+          <PrivateRoute>
+            <MyBooks/>
+          </PrivateRoute>
+        )
       },
       {
         path: "login",

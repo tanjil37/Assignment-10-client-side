@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import toast, { Toaster } from "react-hot-toast";
 
+import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { auth } from "../firebase/firebase.config";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { ToastContainer } from "react-toastify";
+import { Toaster } from "react-hot-toast";
 
 const AddBook = () => {
   const { user } = useAuthState(auth);
@@ -64,6 +65,7 @@ const AddBook = () => {
           rating: "",
           summary: "",
           coverImage: "",
+         
         });
       }
     } catch (error) {
