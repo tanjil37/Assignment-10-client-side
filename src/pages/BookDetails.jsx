@@ -8,18 +8,24 @@ const BookDetails = () => {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  //console.log(id);
+  
   useEffect(() => {
     axios
-      .get(`https://your-server-url.vercel.app/books/${id}`) // Replace with your backend URL
+      .get(`http://localhost:3000/books/${id}`) // Replace with your backend URL
       .then((res) => {
-        setBook(res.data);
+        setBook(res.data.result);
+        //console.log(setBook);
+        
+        console.log(book);
+        
         setLoading(false);
       })
       .catch((err) => {
         console.error("Error fetching book:", err);
         setLoading(false);
       });
-  }, [id]);
+  }, [book, id]);
 
   if (loading) {
     return (

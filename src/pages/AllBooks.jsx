@@ -48,7 +48,7 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router";
+import { Link, Links } from "react-router";
 import { motion } from "framer-motion";
 
 const AllBooks = () => {
@@ -57,7 +57,7 @@ const AllBooks = () => {
 
   useEffect(() => {
     axios
-      .get("https://your-server-url.vercel.app/books") // Replace with your backend URL
+      .get("http://localhost:3000/books") // Replace with your backend URL
       .then((res) => {
         setBooks(res.data);
         setLoading(false);
@@ -102,16 +102,18 @@ const AllBooks = () => {
               >
                 <td className="px-6 py-4 font-medium text-gray-800">
                   {book.title}
+                  
+                  
                 </td>
                 <td className="px-6 py-4">{book.author}</td>
                 <td className="px-6 py-4">{book.genre}</td>
                 <td className="px-6 py-4">{book.rating}/5</td>
                 <td className="px-6 py-4 text-center">
-                  <Links to={`/book-details/${book._id}`}>
+                  <Link to={`/books/${book._id}`}>
                     <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full shadow-md">
                       View Details
                     </button>
-                  </Links>
+                  </Link>
                 </td>
               </motion.tr>
             ))}

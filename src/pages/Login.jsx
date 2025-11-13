@@ -71,22 +71,22 @@ const Login = () => {
       });
   };
 
-  // forgot password fixed
-  const handleForgetPassword = () => {
-    const email = emailRef.current.value;
-    if (!email) {
-      toast.error("Please enter your email first!");
-      return;
-    }
+  //forgot password fixed
+  // const handleForgetPassword = () => {
+  //   const email = emailRef.current.value;
+  //   if (!email) {
+  //     toast.error("Please enter your email first!");
+  //     return;
+  //   }
 
-    sendPasswordResetEmail(auth, email)
-      .then(() => {
-        toast.success("Check your email to reset your password");
-      })
-      .catch((e) => {
-        toast.error(e.message);
-      });
-  };
+  //   sendPasswordResetEmail(auth, email)
+  //     .then(() => {
+  //       toast.success("Check your email to reset your password");
+  //     })
+  //     .catch((e) => {
+  //       toast.error(e.message);
+  //     });
+  // };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-base-200">
@@ -129,7 +129,7 @@ const Login = () => {
 
           <button
             type="button"
-            onClick={handleForgetPassword}
+            // onClick={handleForgetPassword}
             className="link link-hover text-sm mt-1 text-left text-indigo-600"
           >
             Forgot password?

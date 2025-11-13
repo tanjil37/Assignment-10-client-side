@@ -1,12 +1,15 @@
-import React from "react";
-import { Navigate, useLocation } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth"; // your Firebase auth context
 
-const PrivateRoute = ({ children }) => {
-  const { user, loading } = useAuth();
+import { Navigate, useLocation } from "react-router";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase/firebase.config";
+import LoadingSpinner from "../components/LoadingSpinner";
+
+const PrivetRoute = ({ children }) => {
+  const [user, loading] = useAuthState(auth);
   const location = useLocation();
 
-  if (loading) return <div className="text-center mt-10">Loading...</div>;
+  if (loading)
+    return <LoadingSpinner/>
 
   if (!user) {
     return <Navigate to="/login" state={{ from: location }} replace />;
@@ -15,4 +18,4 @@ const PrivateRoute = ({ children }) => {
   return children;
 };
 
-export default PrivateRoute;
+export default PrivetRoute;
