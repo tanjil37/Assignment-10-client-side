@@ -13,20 +13,22 @@ const Hero = () => {
       id: 1,
       title: "Discover Your Next Great Read 📖",
       subtitle: "Explore thousands of books that spark your imagination.",
-      image: "https://i.ibb.co/Ctw1bgn/book-banner-1.jpg",
+      image: "https://i.ibb.co.com/JwyhS6XP/Hero-1.jpg",
       
+
+
     },
     {
       id: 2,
       title: "Write, Share, Inspire ✍️",
       subtitle: "Add your own favorite books and inspire other readers.",
-      image: "https://i.ibb.co/q0j9tQY/book-banner-2.jpg",
+      image: "https://i.ibb.co.com/35DpmhQ9/Hero-2.jpg",
     },
     {
       id: 3,
       title: "Journey Through Stories 🌍",
       subtitle: "From timeless classics to modern adventures — read them all.",
-      image: "https://i.ibb.co/Yf9sMTk/book-banner-3.jpg",
+      image: "https://i.ibb.co.com/jvX9c0vm/Hero-3.jpg",
     },
   ];
 
