@@ -7,7 +7,7 @@
 Welcome to **The Book Haven**, a full-stack digital library web application where book enthusiasts can explore a vast collection of books, add their favorites, manage personal libraries, and engage with a community of readers. Built with React.js for the frontend, Node.js/Express.js for the backend, MongoDB for data storage, and Firebase for secure authentication, this app provides a seamless experience for discovering and curating books. Whether you're a casual reader or a avid collector, The Book Haven is your go-to digital sanctuary.
 
 ### Live Site
-[Visit The Book Haven](https://thebookhaven.netlify.app) <!-- Replace with your actual deployed URL -->
+[Visit The Book Haven]([https://thebookhaven.netlify.app](https://nimble-croissant-cfd9fb.netlify.app/)) <!-- Replace with your actual deployed URL -->
 
 ## Key Features
 - **Intuitive Navigation & Authentication**: Easily log in/register via email/password or Google, with protected routes for personalized features like adding/updating books. Hover over your profile in the navbar to see your details, and toggle between light/dark themes for a comfortable reading experience.
